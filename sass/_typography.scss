@@ -21,12 +21,6 @@
     color: $color-grey-light-1;
   }
 
-  &__4 {
-    @extend %heading;
-    @include color-mode;
-    font-size: 2rem;
-  }
-
   &__2 {
     @extend %heading;
     @include color-mode;
@@ -38,6 +32,18 @@
     color: $color-primary;
     font-size: 2rem;
     text-transform: uppercase;
+  }
+
+  &__4 {
+    @extend %heading;
+    @include color-mode;
+    font-size: 2rem;
+  }
+
+  &__5 {
+    @extend %heading;
+    font-size: 2rem;
+    color: #fff;
   }
 }
 

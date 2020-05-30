@@ -19,20 +19,13 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.heading__1, .heading__4, .heading__2, .heading__3 {
+.heading__1, .heading__2, .heading__3, .heading__4, .heading__5 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
 .heading__1 {
   font-size: 4rem;
   color: #f9f7f6; }
-
-.heading__4 {
-  font-size: 2rem; }
-  .heading__4--light {
-    color: #f9f7f6; }
-  .heading__4--dark {
-    color: #54483A; }
 
 .heading__2 {
   font-size: 4.5rem; }
@@ -45,6 +38,17 @@ body {
   color: #c69963;
   font-size: 2rem;
   text-transform: uppercase; }
+
+.heading__4 {
+  font-size: 2rem; }
+  .heading__4--light {
+    color: #f9f7f6; }
+  .heading__4--dark {
+    color: #54483A; }
+
+.heading__5 {
+  font-size: 2rem;
+  color: #fff; }
 
 .btn {
   font-family: "Josefin Sans", sans-serif;
@@ -127,7 +131,34 @@ body {
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col 7 / full-end; }
+  grid-column: col 7 / full-end;
+  padding: 10rem 0;
+  display: grid;
+  justify-content: center; }
+  .realtors__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    column-gap: .5rem; }
+  .realtors__heading {
+    font-size: 1.6rem;
+    align-self: start;
+    justify-self: center; }
+  .realtors__img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    grid-row: 1 / span 2; }
+  .realtors__name {
+    align-self: end;
+    justify-self: start; }
+  .realtors__text {
+    align-self: start;
+    justify-self: start;
+    font-size: 1.2rem;
+    color: #aaa;
+    text-transform: uppercase; }
 
 .features {
   grid-column: center-start / center-end;

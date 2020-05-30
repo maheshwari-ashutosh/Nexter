@@ -19,9 +19,13 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col] minmax(min-content, 14rem)) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.heading__4, .heading__2 {
+.heading__1, .heading__4, .heading__2, .heading__3 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
+
+.heading__1 {
+  font-size: 4rem;
+  color: #f9f7f6; }
 
 .heading__4 {
   font-size: 2rem; }
@@ -37,7 +41,13 @@ body {
   .heading__2--dark {
     color: #54483A; }
 
+.heading__3 {
+  color: #c69963;
+  font-size: 2rem;
+  text-transform: uppercase; }
+
 .btn {
+  font-family: "Josefin Sans", sans-serif;
   padding: 2rem;
   outline: none;
   border: none;
@@ -76,11 +86,48 @@ body {
 
 .header {
   background-color: #54483A;
-  grid-column: full-start / col 6; }
+  grid-column: full-start / col 7;
+  background: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr min-content min-content 1fr;
+  padding: 8rem;
+  row-gap: 2rem; }
+  .header__logo {
+    height: 4rem;
+    justify-self: center; }
+  .header__btn {
+    justify-self: start;
+    align-self: start; }
+  .header__seenon {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem; }
+    .header__seenon--text {
+      grid-column: 1 / -1;
+      justify-self: stretch;
+      font-size: 1.5rem;
+      color: #aaa;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      align-items: center;
+      gap: 2rem; }
+      .header__seenon--text::before, .header__seenon--text::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: currentColor;
+        width: 100%; }
+    .header__seenon img {
+      height: 3rem;
+      justify-self: center;
+      filter: brightness(60%); }
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col 6 / full-end; }
+  grid-column: col 7 / full-end; }
 
 .features {
   grid-column: center-start / center-end;

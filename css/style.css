@@ -243,4 +243,27 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 12rem 0; }
+  .footer__navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 4rem; }
+  .footer__item {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 2rem 2.5rem;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: transform .2s , background-color .2s; }
+    .footer__item:hover {
+      transform: translateY(-0.5rem);
+      background-color: rgba(255, 255, 255, 0.2); }
+  .footer__copyright {
+    text-align: center;
+    color: #aaa;
+    font-size: 1.6rem; }

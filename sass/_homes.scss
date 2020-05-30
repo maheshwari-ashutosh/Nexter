@@ -1,4 +1,75 @@
 .homes {
-  background-color: $color-secondary;
   grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
+  gap: 7rem;
+  padding: 15rem 0;
+
+  &__card {
+
+    position: relative;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  &__image {
+
+    position: relative;
+    background-color: $color-grey-light-1;
+
+    &--pic {
+      width: 100%;
+    }
+
+    &--caption {
+      font-size: 1.8rem;
+      font-family: $font-display;
+      color: #fff;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+      padding: 1rem;
+      background-color: $color-secondary;
+      width: 80%;
+      text-align: center;
+    }
+
+  }
+
+  &__heart {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-primary;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    background-color: $color-grey-light-1;
+    column-gap: 1rem;
+    row-gap:  2.5rem;
+    padding: 5rem 2rem 3rem;
+
+    &-box {
+      display: flex;
+      align-items: center;
+    }
+
+    &--icon {
+      height: 3rem;
+      width: 3rem;
+      margin-right: 1rem;
+      fill: $color-primary;
+    }
+
+    &--value {
+      font-size: 1.4rem;
+    }
+  }
 }

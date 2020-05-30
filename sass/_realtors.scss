@@ -1,23 +1,37 @@
 .realtors {
   background-color: $color-secondary;
   grid-column: col 7 / full-end;
-
   padding: 10rem 0;
   display: grid;
   justify-content: center;
+  gap: 1rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: auto;
+    row-gap: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem 0;
+  }
 
   &__box {
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     align-items: center;
     justify-items: center;
-    column-gap: .5rem;
+    row-gap: 0;
   }
 
   &__heading {
     font-size: 1.6rem;
     align-self: start;
     justify-self: center;
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__img {
@@ -25,11 +39,19 @@
     height: 8rem;
     border-radius: 50%;
     grid-row: 1 / span 2;
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+      margin-bottom: 2rem;
+    }
   }
 
   &__name {
     align-self: end ;
     justify-self: start;
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
   }
 
   &__text {
@@ -38,5 +60,9 @@
     font-size: 1.2rem;
     color: $color-grey-light-2;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
   }
 }

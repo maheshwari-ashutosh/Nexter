@@ -4,6 +4,9 @@
   grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
   gap: 7rem;
   padding: 15rem 0;
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem 0;
+  }
 
   &__card {
 

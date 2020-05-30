@@ -3,6 +3,12 @@
   grid-row: 1 / -1;
   grid-column: sidebar-start / sidebar-end;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    text-align: right;
+  }
+
   &__toggle {
     margin: 4rem auto;
     width: 60%;
@@ -16,6 +22,12 @@
       background-color: #fff;
     }
 
+    @media only screen and (max-width: $bp-large) {
+      display: inline-block;
+      width: 4rem;
+      margin-right: 4rem;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -25,10 +37,16 @@
 
     &::before {
       top: -1.5rem;
+      @media only screen and (max-width: $bp-large) {
+        top: -1rem;
+      }
     }
 
     &::after {
       top: 1.5rem;
+      @media only screen and (max-width: $bp-large) {
+        top: 1rem;
+      }
     }
   }
 }

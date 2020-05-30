@@ -57,6 +57,22 @@ body {
   background-color: #c69963;
   grid-row: 1 / -1;
   grid-column: sidebar-start / sidebar-end; }
+  .sidebar__toggle {
+    margin: 4rem auto;
+    width: 60%;
+    position: relative; }
+    .sidebar__toggle, .sidebar__toggle::before, .sidebar__toggle::after {
+      display: block;
+      height: 0.2rem;
+      background-color: #fff; }
+    .sidebar__toggle::before, .sidebar__toggle::after {
+      content: "";
+      width: 100%;
+      position: absolute; }
+    .sidebar__toggle::before {
+      top: -1.5rem; }
+    .sidebar__toggle::after {
+      top: 1.5rem; }
 
 .header {
   background-color: #54483A;
